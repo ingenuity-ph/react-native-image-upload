@@ -1,6 +1,6 @@
 {
   "name": "react-native-image-uploader",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "React Native module that uses Expo functions to Open Camera and Camera Roll and also upload to API using react-native-api-client-wrapper",
   "main": "Index.js",
   "scripts": {
