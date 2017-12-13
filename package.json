@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org:ingenuityph/react-native-image-upload.git"
+  },
   "keywords": [
     "Image",
     "Image",
