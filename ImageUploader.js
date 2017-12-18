@@ -12,17 +12,21 @@ module.exports = {
    * @param {*} aspectratio should be an array ex. [1,1] [3,4]
    */
   async openCamera(aspectratio = []){
-    let result = await ImagePicker.launchCameraAsync({
-      allowsEditing: true,
-      aspect: aspectratio,
-      base64: true,
-    });
-
-    if (!result.cancelled) {
-      return result;       
-    }else {
-      throw new Error('Cancelled')
-    }
+    return new Promise(async function(resolve, reject) {
+      ImagePicker.launchCameraAsync({
+        allowsEditing: true,
+        aspect: aspectratio,
+        base64: true,
+      }).then((response) => {
+        if (!response.cancelled) {
+          resolve(response)
+        }else {
+          throw new error("Cancelled")
+        }
+      }).catch((error) => {
+        reject(error)
+      })
+    })
 
   },
 
@@ -31,17 +35,21 @@ module.exports = {
    * @param {*} aspectratio should be an array ex. [1,1] [3,4]
    */
   async openCameraRoll(aspectratio = []){
-    let result = await ImagePicker.launchImageLibraryAsync({
-      allowsEditing: true,
-      aspect: aspectratio,
-      base64: true,
-    });
-
-    if (!result.cancelled) {
-      return result;       
-    }else {
-      throw new Error('Cancelled')
-    }
+    return new Promise(async function(resolve, reject) {
+      ImagePicker.launchImageLibraryAsync({
+        allowsEditing: true,
+        aspect: aspectratio,
+        base64: true,
+      }).then((response) => {
+        if (!response.cancelled) {
+          resolve(response)
+        }else {
+          throw new error("Cancelled")
+        }
+      }).catch((error) => {
+        reject(error)
+      })
+    })
 
   },
 
@@ -53,7 +61,7 @@ module.exports = {
    * let headers = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
-    'Authorization': 'Client-ID e2afa72d74237d8'
+    'Authorization': 'This is your Token'
   };
    * @param {*} params same format as headers.
    * params ex. 
@@ -63,7 +71,7 @@ module.exports = {
    */
   async uploadtoServer(APIEndpoint, headers, params) {
     let url = APIEndpoint;
-    let client = new APIClient(url, APIConstants.HTTPMethod.POST);
+    let client = new APIClient(url, APIConstants.HTacTPMethod.POST);
     return client.sendRequest(headers, params);
   }
 

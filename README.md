@@ -18,7 +18,7 @@ $ npm install --save react-native-image-uploader
 ## Usage
 
 ```js
-Import { ImageUploader } from 'react-native-image-uploader'
+import { ImageUploader } from 'react-native-image-uploader'
 
 openCamera = async () => {
   /**
@@ -26,7 +26,16 @@ openCamera = async () => {
    * @param {*} aspectratio should be an array ex. [1,1] [3,4]
    */
   ImageUploader.openCamera(aspectratio).then((result) => {
-    //result
+    /** result
+     * Object {
+     * base64: base64code,
+     * cancelled: false
+     * height: 123,
+     * type: image
+     * uri: directoryfromstorage
+     * width: 123
+     * }
+     */
     }).catch((error) => {
     //error
     })
@@ -38,7 +47,16 @@ openCameraRoll = async () => {
    * @param {*} aspectratio should be an array ex. [1,1] [3,4]
    */
   ImageUploader.openCameraRoll(aspectratio).then((result) => {
-    //result
+    /** result
+     * Object {
+     * base64: base64code,
+     * cancelled: false
+     * height: 123,
+     * type: image
+     * uri: directoryfromstorage
+     * width: 123
+     * }
+     */
     }).catch((error) => {
     //error
     })
