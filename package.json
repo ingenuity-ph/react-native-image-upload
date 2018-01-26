@@ -1,6 +1,6 @@
 {
   "name": "@ingenuity-labs/react-native-image-uploader",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React Native module that uses Expo functions to Open Camera and Camera Roll and also upload to API using react-native-api-client-wrapper",
   "main": "Index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/ingenuityph/react-native-image-upload.git"
+    "url": "https://github.com/ingenuity-ph/react-native-image-upload"
   },
   "keywords": [
     "Image",
@@ -19,6 +19,6 @@
     "Roll"
   ],
   "author": "Redmond Job V. Perez",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/ingenuityph/react-native-image-upload#readme"
+  "license": "MIT",
+  "homepage": "https://github.com/ingenuity-ph/react-native-image-upload"
 }
